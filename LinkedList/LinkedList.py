@@ -1,6 +1,6 @@
 class Node:
-    def __init__(self):
-        self.Data=None
+    def __init__(self,data):
+        self.Data=data
         self.NextPointer=None
 
     def GetData(self):
@@ -11,10 +11,10 @@ class Node:
         self.Data=newdata
 
     def GetNextPointer(self):
-        return self.next
+        return self.NextPointer
 
     def SetNextPointer(self,newnext):
-        self.next=newnext
+        self.NextPointer=newnext
         
 
 
@@ -24,16 +24,37 @@ class UnorderedList:
         self.Head=None
 
     def isEmpty(self):
-        return self.head==none
+        return self.Head==none
 
     def add(self,item):
-        temp=Node(data)
-        temp.setNext(self.head)
-        self.head=temp
+        temp=Node(item)
+        temp.SetNextPointer(self.Head)
+        self.Head=temp
 
     def getList(self):
+        
+        while self.Head!=None:
+            return self.Head
+            self.Head=self.NextPointer        
+            
+        else:
+            print()
+            
+        
+            
+            
+            
+        
 
     def length(self):
+        temp=self.Head
+        count=0
+        while temp != None:
+            
+            count+=1
+            temp=temp.NextPointer
+        print(count)
+        return count 
 
     def search(self,item):
         found=False
@@ -80,7 +101,26 @@ class OrderedList(UnorderedList):
         
 
     def add(self,item):
+        temp=self.Head
+        while temp != None:
+            if temp.NextPointer>temp.Head:
+                print()
+            temp=temp.NextPointer
+        
 
-if __name__="__main__":
+if __name__=="__main__":
+    myList=UnorderedList()
+    myList.add(5)
+    print(myList.length())
+    myList.add(6)
+    print(myList.length())
+    myList.add(6)
+    print(myList.length())
+    print(myList.getList())
+    List=OrderedList()
+    List.add(5)
+    List.add(3)
+    List.add(8)
+    
     
         

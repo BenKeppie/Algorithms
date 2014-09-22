@@ -1,9 +1,11 @@
 def palindrome_check(word):
     
-    if len(word==1):
+    if (len(word)==1) or (len(word)==0):
         Result=True
+    elif word[0]==word[1]:
+        word=word[1:-1]
+        result=palindrome_check(word)
     else:
-        Result=palindrome_check(word, first+1,last-1)
         Result=False
          
     
