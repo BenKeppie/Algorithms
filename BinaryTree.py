@@ -11,8 +11,8 @@ class BinaryTree:
     def get_right_child(self):
         return self.right
 
-    def set_root_val(self,List):
-        self.root=List[0]
+    def set_root_val(self,value):
+        self.root=value
 
     def get_root_val(self):
         return self.root
